@@ -7,7 +7,12 @@
 	"svelte": "src/index.js",
 	"scripts": {
 		"build": "rollup -c",
-		"dev": "rollup -c -w"
+		"dev": "rollup -c -w",
+		"watch:pug": "pug mock/src/pug/ -o mock/dist -P -w",
+		"build:pug": "pug mock/src/pug/ -o mock/dist -P",
+		"watch:stylus": "stylus -w mock/src/stylus/ -o mock/dist/css",
+		"build:stylus": "stylus mock/src/stylus/ -o mock/dist/css",
+		"mock": "npm run build:stylus && npm run build:pug"
 	},
 	"keywords": [],
 	"author": "",
@@ -17,6 +22,7 @@
 		"autoprefixer": "^10.4.7",
 		"postcss": "^8.4.14",
 		"pug": "^3.0.2",
+		"pug-cli": "^1.0.0-alpha6",
 		"rollup": "^2.75.3",
 		"rollup-plugin-node-resolve": "^5.2.0",
 		"rollup-plugin-svelte": "^7.1.0",
