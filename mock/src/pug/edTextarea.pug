@@ -1,17 +1,20 @@
 extends pattern/template.pug
 
 block assets
-	link(rel="css/edTextarea.css")
+	link(rel='stylesheet', href="css/edTextarea.css")
 
 block content
 	section
 		h1 Default
-		textarea
+		.container
+			textarea
 	
 	section
 		h1 Label:focus
-		textarea
+		.container
+			textarea
 	
 	section 
 		h1 Counter
-		textarea
+		.container
+			textarea
