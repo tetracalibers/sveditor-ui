@@ -11,6 +11,7 @@
       margin-top: 2.5em
   &:focus-within
     box-shadow: rgba(255,255,255,.3) 0px 0px 9px 0px, rgba(255,255,255,.8) -6px -2px 15px 0px;
+  
   .label
     position: absolute;
     top: 0;
@@ -22,6 +23,19 @@
       font-size: .9em
       padding: 0 
       color: rgb(210,149,155)
+  
+  .counter 
+    position: absolute;
+    bottom: -1.75em;
+    text-align: right;
+    display: block;
+    width: 100%;
+    font-size: .8em;
+    left: -0.25em;
+    color: rgba(75, 101, 96, .6)
+    ^[0]:focus-within ^[1..-1]
+      color: rgb(210,149,155)
+  
   textarea 
     resize none
     border-radius 6px
