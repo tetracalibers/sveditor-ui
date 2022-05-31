@@ -5,8 +5,23 @@
   margin 1em 
   box-shadow: rgba(178, 193, 188,.48) 1px 1px 5px 0px, rgba(255,255,255,.8) -6px -2px 15px 0px;
   transition: box-shadow .05s
+  &.has-label
+    margin-top 1em
+    &^[0]:focus-within
+      margin-top: 2.5em
   &:focus-within
     box-shadow: rgba(255,255,255,.3) 0px 0px 9px 0px, rgba(255,255,255,.8) -6px -2px 15px 0px;
+  .label
+    position: absolute;
+    top: 0;
+    padding: .5em
+    transition: all .25s ease
+    color: rgba(75, 101, 96, .75)
+    ^[0]:focus-within ^[1..-1]
+      top: -1.5em; 
+      font-size: .9em
+      padding: 0 
+      color: rgb(210,149,155)
   textarea 
     resize none
     border-radius 6px

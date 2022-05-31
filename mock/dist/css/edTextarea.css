@@ -6,8 +6,27 @@
   box-shadow: rgba(178,193,188,0.48) 1px 1px 5px 0px, rgba(255,255,255,0.8) -6px -2px 15px 0px;
   transition: box-shadow 0.05s;
 }
+.container.has-label {
+  margin-top: 1em;
+}
+.container.has-label.container:focus-within {
+  margin-top: 2.5em;
+}
 .container:focus-within {
   box-shadow: rgba(255,255,255,0.3) 0px 0px 9px 0px, rgba(255,255,255,0.8) -6px -2px 15px 0px;
+}
+.container .label {
+  position: absolute;
+  top: 0;
+  padding: 0.5em;
+  transition: all 0.25s ease;
+  color: rgba(75,101,96,0.75);
+}
+.container:focus-within .label {
+  top: -1.5em;
+  font-size: 0.9em;
+  padding: 0;
+  color: #d2959b;
 }
 .container textarea {
   resize: none;
